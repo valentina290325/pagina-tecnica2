@@ -1,0 +1,895 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'DM Sans', sans-serif;
+color: #172b35;
+background: #f7f8f6;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+.container {
+width: min(1160px, calc(100% - 48px));
+margin: auto;
+}
+
+.section {
+padding: 100px 0;
+}
+
+.topbar {
+background: #102a36;
+color: #c5d4d7;
+font-size: 10px;
+letter-spacing: 1.5px;
+}
+
+.topbar-content {
+height: 35px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+header {
+background: white;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 3px 20px #102a3610;
+}
+
+.navbar {
+height: 82px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.logo-icon {
+width: 45px;
+height: 45px;
+background: #e1a94c;
+color: #102a36;
+display: grid;
+place-items: center;
+font-size: 23px;
+font-weight: 800;
+border-radius: 4px;
+position: relative;
+}
+
+.logo-icon span {
+font-size: 11px;
+position: absolute;
+right: 5px;
+top: 5px;
+}
+
+.logo-text {
+display: flex;
+flex-direction: column;
+gap: 4px;
+}
+
+.logo-text strong {
+font-family: 'Manrope', sans-serif;
+font-size: 12px;
+letter-spacing: 0.5px;
+}
+
+.logo-text small {
+font-size: 10px;
+letter-spacing: 2px;
+color: #77878b;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 27px;
+}
+
+nav a {
+font-size: 12px;
+font-weight: 700;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #b78031;
+}
+
+.nav-button {
+background: #102a36;
+color: white;
+padding: 13px 20px;
+border-radius: 3px;
+}
+
+.nav-button:hover {
+background: #b78031;
+color: white;
+}
+
+.menu-toggle {
+display: none;
+background: none;
+border: none;
+font-size: 27px;
+cursor: pointer;
+color: #102a36;
+}
+
+.hero {
+min-height: 590px;
+background:
+linear-gradient(
+90deg,
+#0c2532ed,
+#0c2532b5,
+#0c253255
+),
+url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=85");
+
+background-size: cover;
+background-position: center;
+position: relative;
+color: white;
+display: flex;
+align-items: center;
+}
+
+.hero-content {
+padding: 100px 0 130px;
+position: relative;
+z-index: 2;
+}
+
+.hero-label {
+color: #edc77e;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 2.5px;
+}
+
+.hero h1 {
+font-family: 'Manrope', sans-serif;
+font-size: clamp(45px, 6vw, 76px);
+font-weight: 800;
+line-height: 1.1;
+letter-spacing: -3px;
+margin: 27px 0;
+}
+
+.hero h1 span {
+color: #e9b85f;
+}
+
+.hero-content p {
+max-width: 560px;
+color: #d1dadd;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.hero-buttons {
+display: flex;
+align-items: center;
+gap: 25px;
+margin-top: 35px;
+}
+
+.btn-primary {
+background: #e1a94c;
+color: #172b35;
+padding: 16px 22px;
+font-size: 12px;
+font-weight: 800;
+border-radius: 3px;
+transition: 0.3s;
+}
+
+.btn-primary:hover {
+background: white;
+transform: translateY(-3px);
+}
+
+.btn-secondary {
+color: white;
+font-size: 12px;
+font-weight: 600;
+}
+
+.btn-secondary:hover {
+color: #e1a94c;
+}
+
+.hero-footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+border-top: 1px solid #ffffff35;
+}
+
+.hero-footer .container {
+height: 58px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 9px;
+letter-spacing: 1.5px;
+color: #d5dfe1;
+}
+
+.section-label {
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 2.2px;
+color: #b78031;
+}
+
+.section h2 {
+font-family: 'Manrope', sans-serif;
+font-size: clamp(34px, 4vw, 48px);
+font-weight: 800;
+line-height: 1.2;
+letter-spacing: -1.7px;
+margin-top: 18px;
+}
+
+.section h2 span {
+color: #b78031;
+}
+
+.institution {
+background: #f7f8f6;
+}
+
+.institution-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 90px;
+}
+
+.institution-text {
+padding-top: 10px;
+color: #718084;
+font-size: 14px;
+line-height: 1.9;
+}
+
+.institution-text p {
+margin-bottom: 14px;
+}
+
+.institution-text .important-text {
+color: #25363c;
+font-size: 17px;
+line-height: 1.7;
+font-weight: 600;
+}
+
+.statistics {
+margin-top: 70px;
+padding-top: 30px;
+border-top: 1px solid #dce2df;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+
+.statistics div {
+display: flex;
+align-items: center;
+gap: 20px;
+border-right: 1px solid #dce2df;
+padding-left: 25px;
+}
+
+.statistics div:first-child {
+padding-left: 0;
+}
+
+.statistics div:last-child {
+border: none;
+}
+
+.statistics strong {
+font-family: 'Manrope', sans-serif;
+font-size: 32px;
+color: #bd8737;
+}
+
+.statistics span {
+font-size: 12px;
+color: #69777b;
+}
+
+.specialty {
+background: #edf1ef;
+}
+
+.section-heading {
+display: flex;
+justify-content: space-between;
+align-items: end;
+margin-bottom: 45px;
+gap: 30px;
+}
+
+.section-heading > p {
+max-width: 340px;
+font-size: 13px;
+line-height: 1.8;
+color: #6e7b7e;
+}
+
+.specialty-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.specialty-card {
+background: white;
+padding: 35px;
+min-height: 235px;
+transition: 0.3s;
+border-bottom: 3px solid transparent;
+}
+
+.specialty-card:hover {
+transform: translateY(-7px);
+border-bottom-color: #d5a34c;
+box-shadow: 0 15px 35px #102a3610;
+}
+
+.specialty-icon {
+font-size: 32px;
+color: #bd8737;
+margin-bottom: 20px;
+}
+
+.specialty-card > span {
+font-size: 9px;
+font-weight: 800;
+letter-spacing: 1.5px;
+color: #b78031;
+}
+
+.specialty-card h3 {
+font-family: 'Manrope', sans-serif;
+font-size: 21px;
+margin: 13px 0;
+}
+
+.specialty-card p {
+font-size: 13px;
+line-height: 1.8;
+color: #718084;
+}
+
+.education {
+background: white;
+}
+
+.education-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 0 45px;
+}
+
+.education-item {
+display: flex;
+gap: 25px;
+padding: 27px 0;
+border-bottom: 1px solid #e4e9e6;
+}
+
+.education-number {
+font-family: 'Manrope', sans-serif;
+font-size: 25px;
+font-weight: 800;
+color: #bd8737;
+}
+
+.education-item h3 {
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.education-item p {
+font-size: 13px;
+line-height: 1.8;
+color: #718084;
+}
+
+.school-life {
+background: #f7f8f6;
+}
+
+.life-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 85px;
+align-items: center;
+}
+
+.life-text > p {
+font-size: 14px;
+line-height: 1.9;
+color: #718084;
+margin-top: 22px;
+}
+
+.life-list {
+margin-top: 30px;
+}
+
+.life-list div {
+padding: 15px 0;
+border-bottom: 1px solid #e1e6e3;
+display: flex;
+align-items: center;
+gap: 22px;
+font-size: 13px;
+font-weight: 600;
+}
+
+.life-list span {
+color: #bd8737;
+font-weight: 800;
+}
+
+.life-image {
+height: 420px;
+position: relative;
+overflow: hidden;
+}
+
+.life-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.5s;
+}
+
+.life-image:hover img {
+transform: scale(1.05);
+}
+
+.image-caption {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 22px;
+color: white;
+background: linear-gradient(transparent, #102a36d9);
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.news {
+background: #edf1ef;
+}
+
+.news-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 22px;
+}
+
+.news-card {
+background: white;
+overflow: hidden;
+transition: 0.3s;
+}
+
+.news-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 15px 35px #102a3610;
+}
+
+.news-image {
+height: 175px;
+display: flex;
+align-items: center;
+padding: 25px;
+color: #ffffffaa;
+font-family: 'Manrope', sans-serif;
+font-size: 55px;
+font-weight: 800;
+}
+
+.news-one {
+background: linear-gradient(135deg, #173947, #46727a);
+}
+
+.news-two {
+background: linear-gradient(135deg, #b37c2e, #e6bd72);
+}
+
+.news-three {
+background: linear-gradient(135deg, #3d5d55, #9ba99a);
+}
+
+.news-content {
+padding: 24px;
+}
+
+.news-content small {
+color: #b78031;
+font-size: 9px;
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+
+.news-content h3 {
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+margin: 13px 0;
+}
+
+.news-content p {
+color: #718084;
+font-size: 12px;
+line-height: 1.8;
+}
+
+.news-content a {
+display: inline-block;
+margin-top: 20px;
+color: #a8752b;
+font-size: 11px;
+font-weight: 800;
+}
+
+.news-content a:hover {
+color: #172b35;
+}
+
+.demo-notice {
+margin-top: 25px;
+font-size: 10px;
+color: #859194;
+line-height: 1.7;
+}
+
+.contact {
+background: #102d3a;
+color: white;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 90px;
+}
+
+.contact-heading h2 {
+font-size: 48px;
+}
+
+.contact-heading h2 span {
+color: #e1ad58;
+}
+
+.contact-heading p {
+color: #c2d0d3;
+font-size: 13px;
+line-height: 1.9;
+margin-top: 22px;
+max-width: 390px;
+}
+
+.contact-box {
+background: #193c49;
+padding: 35px;
+}
+
+.contact-item {
+padding-bottom: 22px;
+margin-bottom: 22px;
+border-bottom: 1px solid #ffffff24;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.contact-item small {
+color: #e1ad58;
+font-size: 9px;
+font-weight: 800;
+letter-spacing: 1.7px;
+}
+
+.contact-item strong {
+font-size: 13px;
+line-height: 1.8;
+font-weight: 500;
+}
+
+.contact-item a:hover {
+color: #e1ad58;
+}
+
+.map-button {
+display: inline-block;
+background: #e1ad58;
+color: #102d3a;
+padding: 15px 20px;
+font-size: 12px;
+font-weight: 800;
+border-radius: 3px;
+transition: 0.3s;
+}
+
+.map-button:hover {
+background: white;
+}
+
+footer {
+background: #0b202a;
+color: #b8c6c9;
+}
+
+.footer-top {
+min-height: 110px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+}
+
+.footer-logo .logo-text strong {
+color: white;
+}
+
+.footer-logo .logo-text small {
+color: #91a2a6;
+}
+
+.footer-top p {
+font-size: 11px;
+}
+
+.back-top {
+font-size: 9px;
+letter-spacing: 1.5px;
+}
+
+.footer-bottom {
+border-top: 1px solid #ffffff1c;
+padding: 22px 0;
+display: flex;
+justify-content: space-between;
+gap: 15px;
+font-size: 9px;
+color: #829498;
+}
+
+@keyframes aparecer {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.hero-content {
+animation: aparecer 1s ease;
+}
+
+@media (max-width: 900px) {
+
+nav {
+gap: 15px;
+}
+
+nav a {
+font-size: 10px;
+}
+
+.institution-grid,
+.life-grid,
+.contact-grid {
+gap: 40px;
+}
+
+.section {
+padding: 75px 0;
+}
+
+}
+
+@media (max-width: 650px) {
+
+.container {
+width: calc(100% - 35px);
+}
+
+.topbar-content {
+font-size: 8px;
+}
+
+.topbar-content span:last-child {
+display: none;
+}
+
+.navbar {
+height: 72px;
+}
+
+.menu-toggle {
+display: block;
+}
+
+nav {
+display: none;
+position: absolute;
+top: 72px;
+left: 0;
+width: 100%;
+background: white;
+padding: 20px 25px;
+flex-direction: column;
+align-items: stretch;
+box-shadow: 0 12px 18px #102a3615;
+}
+
+nav.active {
+display: flex;
+}
+
+nav a {
+padding: 13px 5px;
+font-size: 13px;
+}
+
+.nav-button {
+text-align: center;
+margin-top: 8px;
+}
+
+.hero {
+min-height: 590px;
+background-position: 60% center;
+}
+
+.hero-content {
+padding: 80px 0 110px;
+}
+
+.hero h1 {
+font-size: 46px;
+letter-spacing: -2px;
+}
+
+.hero-content p {
+font-size: 13px;
+}
+
+.hero-buttons {
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+}
+
+.hero-footer .container {
+font-size: 7px;
+letter-spacing: 0.7px;
+}
+
+.section {
+padding: 75px 0;
+}
+
+.section h2 {
+font-size: 36px;
+}
+
+.institution-grid,
+.life-grid,
+.contact-grid {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+
+.statistics {
+margin-top: 40px;
+gap: 15px;
+}
+
+.statistics div {
+flex-direction: column;
+align-items: flex-start;
+gap: 7px;
+padding-left: 10px;
+}
+
+.statistics strong {
+font-size: 25px;
+}
+
+.statistics span {
+font-size: 10px;
+}
+
+.section-heading {
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
+}
+
+.specialty-grid,
+.education-grid,
+.news-grid {
+grid-template-columns: 1fr;
+}
+
+.specialty-card {
+padding: 27px;
+}
+
+.life-image {
+height: 320px;
+}
+
+.contact-heading h2 {
+font-size: 40px;
+}
+
+.contact-box {
+padding: 25px;
+}
+
+.footer-top {
+padding: 25px 0;
+align-items: flex-start;
+flex-direction: column;
+}
+
+.footer-bottom {
+flex-direction: column;
+}
+
+.back-top {
+align-self: flex-end;
+}
+
+}
+
+.animacion-scroll {
+opacity: 0;
+transform: translateY(25px);
+transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animacion-scroll.visible {
+opacity: 1;
+transform: translateY(0);
+}
